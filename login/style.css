@@ -1,0 +1,128 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /*background-image: url("images/3.jpg");*/ /* Uncomment to set a background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #191970; /* Dark blue background */
+}
+
+span, header {
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+header {
+    font-size: 30px;
+}
+
+.input-field {
+    position: relative; /* Added for icon positioning */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-field .input {
+    height: 40px;
+    width: 80%; /* Adjusted to full width */
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff; /* White text color for visibility */
+    padding-left: 45px; /* Adjusted padding for icon */
+    background: rgba(255,255,255,0.2); /* Slightly darker background for contrast */
+}
+
+.input-field i {
+    position: absolute;
+    top: 10px; /* Adjusted top position */
+    left: 15px; /* Adjusted left position */
+    color: white; /* White color for icons */
+}
+
+::-webkit-input-placeholder {
+    color: #fff; /* White placeholder text */
+}
+
+.submit {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 95%; /* Adjusted to full width */
+    background: rgba(128,128,128); /* Grey background */
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover {
+    box-shadow: 0px 0px 10px 0px rgba(245,245,220); /* Subtle hover effect */
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.left {
+    display: flex;
+}
+
+label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Log out*/
+
+.submit {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 95%; /* Adjusted to full width */
+    background: rgba(128,128,128); /* Grey background */
+    cursor: pointer;
+    transition: .3s;
+    color: white; /* Text color */
+    text-decoration: none;
+}
+
+.submit:hover {
+    box-shadow: 0px 0px 10px 0px rgba(245,245,220); /* Subtle hover effect */
+}
+
+

@@ -1,0 +1,195 @@
+/* Chat bar */
+.chat-bar-collapsible {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid white;
+    border-bottom: none;
+}
+
+.collapsible {
+    background-color: rgb(7, 7, 90);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 350px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.full-chat-block {
+    width: 350px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+
+.outer-container {
+    min-height: 600px;
+    bottom: 0%;
+    position: relative;
+}
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* User input box */
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none;
+}
+
+/* User and bot messages */
+.userText, .botText {
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-align: right;
+    clear: both;
+}
+
+.userText span, .botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    animation: floatup .5s forwards;
+}
+
+.botText {
+    text-align: left;
+}
+
+.botText span {
+    background: #e0e0e0;
+}
+
+/* User options */
+#chatbox p a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#chatbox p a:hover, #chatbox p a:focus {
+    background-color: #45a049;
+    transform: scale(0.95);
+}
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Initial chat icon styling */
+.chat-icon-initial {
+    display: block; /* Initially visible */
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: rgb(7, 7, 90);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:600px) {
+    .full-chat-block, .chat-bar-collapsible, .collapsible {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .chat-bar-collapsible, .chat-icon-initial {
+        bottom: 10px;
+        right: 10px;
+        width: calc(100% - 20px); /* Full width with some margin */
+    }
+
+    .chat-bar-collapsible {
+        border-radius: 0; /* Make chat window square on smaller screens */
+    }
+}
